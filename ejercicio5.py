@@ -16,12 +16,11 @@ class mochila_artefactos():
     def len(self):
         return len(self.objetos)
 
-
-    def sacar_objetos(self, objetos):
-        self.objetos.remove(objetos)
-
     def agregar_objetos(self, objetos):
         self.objetos.append(objetos)
+
+    def sacar_objetos(self,objetos):
+        self.objetos.remove(objetos)
 
     def usar_la_fuerza(self, i=0):
         if i == len(self.objetos):
@@ -29,6 +28,7 @@ class mochila_artefactos():
         if self.objetos[i] == "sable de luz":
             return f"El sable de luz estaba" + str(i+1) + "de la mochila"
         return self.usar_la_fuerza(i+1)
+
 
 mochila = mochila_artefactos()
 mochila.agregar_objetos("sable de luz")
