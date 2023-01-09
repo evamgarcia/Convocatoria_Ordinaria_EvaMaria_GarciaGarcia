@@ -1,8 +1,6 @@
 def knapsack(precio, pesos, peso_maximo):
     n = len(precio)
-    # Crear una matriz de ceros
     K = [[0 for x in range(peso_maximo + 1)] for x in range(n + 1)]
-    # Construir la matriz K[][] en el orden bottom-up
     for i in range(n + 1):
         for w in range(peso_maximo + 1):
             if i == 0 or w == 0:
